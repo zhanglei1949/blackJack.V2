@@ -109,7 +109,7 @@ int man(float sum1,string inf1){
 		if (jud=='N'||jud=='n') {
 			break;
 		} 
-		else if (jud=='Y'\\jud=='y'){ 
+		else if (jud=='Y'||jud=='y'){ 
 		  ++j;
 		  ++count1;
 		  inf1+=cor(poker[j]);
