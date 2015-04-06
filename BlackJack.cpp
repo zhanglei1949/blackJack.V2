@@ -46,14 +46,14 @@ int main(){
        cout<<"cout1 "<<count1<<" count2 "<<count2<<endl;
 	   cout<<"Do you want to continer?(Y/N)"<<endl;//interaction.
 	   cin>>jud;
-	   while ((jud!='Y'&&jud!='N')||(cin.fail())){//examine the input.
+	   while ((jud!='Y'&&jud!='N'&&jud!='n'&&jud!='y')||(cin.fail())){//examine the input.
 	   	   cout<<"Please enter Y or N!"<<endl;
 	   	   cin>>jud;
 	   }
-	   if (jud=='Y') {
+	   if (jud=='Y'||jud=='y') {
 	   cout<<"Another round"<<endl;//determine whether to continue or not.
        }
-	   if (jud=='N') {
+	   if (jud=='N'||jud=='n') {
 	   cout<<"Game over"<<endl;break;
 	   }
    
@@ -102,18 +102,18 @@ int man(float sum1,string inf1){
 	while (true){	
 		cout<<"Do you want one more card?(Y/N)"<<endl;
 		cin>>jud;
-		while ((jud!='Y'&&jud!='N')||cin.fail()){
+		while ((jud!='Y'&&jud!='N'&&jud!='n'&&jud!='y')||cin.fail()){
 			cout<<"Please enter Y or N:"<<endl;
 			cin>>jud;
 		}
-		if (jud=='N') {
+		if (jud=='N'||jud=='n') {
 			break;
 		} 
-		else if (jud=='Y'){ 
+		else if (jud=='Y'\\jud=='y'){ 
 		  ++j;
 		  ++count1;
 		  inf1+=cor(poker[j]);
-	      sum1+=calcu(poker[j]);
+	          sum1+=calcu(poker[j]);
 		  cout<<"You now have:"<<inf1<<endl;
 		}
 		if (sum1>21){
@@ -123,7 +123,6 @@ int man(float sum1,string inf1){
 			break;
 		} 
 	}
-	cout<<"sum1 is"<<sum1<<endl;
 	return sum1;
 }
 void com(float sum1,float sum2,string inf2){
@@ -165,14 +164,11 @@ void com(float sum1,float sum2,string inf2){
 					j++;
 					++count2;
 					inf2+=cor(poker[j]);
-				    sum2+=calcu(poker[j]);
+				        sum2+=calcu(poker[j]);
 					cout<<"computer now have:"<<inf2<<endl; 
 				}
 			}
 		}
-	cout<<"sum2 "<<sum2<<" "<<j<<endl;	
 	}
-	cout<<"count1"<<count1<<"count2"<<count2<<endl;
-
 }
 
